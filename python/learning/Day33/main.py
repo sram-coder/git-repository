@@ -9,3 +9,9 @@ import requests
 
 #iss_position = (longitude, latitude)
 #print(iss_position)
+parameters = {
+    "lat":MY_LAT
+    "lng":MY_LONG
+}
+
+response
