@@ -11,7 +11,9 @@ const App = () =>{
   const handleSearchSubmit = (e) => {
   e.preventDefault();
   console.log(word)
-};
+  }
+
+  console.log(process.env)
   
   return (
     <div>
