@@ -13,7 +13,7 @@ const App = () =>{
   console.log(word)
   }
 
-  console.log(process.env)
+  console.log(process.env.REACT_APP_URL)
   
   return (
     <div>
