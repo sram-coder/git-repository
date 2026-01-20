@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./components/Header";
-import Search from "./components/Search";
+import Header from "../components/Header";
+import Search from "../components/Search";
 
 const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY;
 
