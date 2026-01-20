@@ -2,6 +2,7 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import Search from "./components/Search";
+import ImageCard from "./components/ImageCard";
 
 const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY;
 
@@ -15,11 +16,11 @@ const App = () => {
     e.preventDefault();
     console.log(word);
     fetch(
-      `https://api.unsplash.com/photos/random?query=${encodeURIComponent(word)}&client_id=${UNSPLASH_KEY}`,
-    )
+      `https://api.unsplash.com/photos/random?query=${encodeURIComponent(word)}&client_id=${UNSPLASH_KEY}`,)
       .then((res) => res.json())
       .then((data) => {
-        setImages([data, ...images]);
+        console.log(data);
+        setImages([{...data, title: word}, ...images]);
         console.log(images);
       })
       .catch((err) => console.log(err));
@@ -31,6 +32,7 @@ const App = () => {
     <div>
       <Header title="Images Gallery" />
       <Search word={word} setWord={setWord} handleSubmit={handleSearchSubmit} />
+      {images.map((image, i) => (<ImageCard key={i} image={image}/>))}
     </div>
   );
 };
