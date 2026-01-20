@@ -5,7 +5,9 @@
         "javascript",
         "javascriptreact"
     ],
-
+    "workbench.editorAssociations": {
+    "*.svg": "default"
+    },
     "editor.codeActionsOnSave":{
         "source.fixAll.eslint": true
     }
