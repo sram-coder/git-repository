@@ -16,10 +16,8 @@ const App = () => {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     fetch(
-      // `https://api.unsplash.com/photos/random?query=${encodeURIComponent(word)}&client_id=${UNSPLASH_KEY}&count=10`,)
       `https://api.unsplash.com/photos/random?query=${encodeURIComponent(word)}&client_id=${UNSPLASH_KEY}`,
     )
-      // `https://api.unsplash.com/photos/search?query=${encodeURIComponent(word)}&client_id=${UNSPLASH_KEY},)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
